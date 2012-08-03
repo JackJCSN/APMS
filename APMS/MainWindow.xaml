@@ -1,0 +1,48 @@
+﻿<Window x:Class="APMS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="学生公寓管理系统" WindowStartupLocation="CenterScreen" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" MinWidth="800" MinHeight="600" ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight" mc:Ignorable="d" d:DesignHeight="672" d:DesignWidth="824">
+    <Grid Name="grid1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="521*" />
+            <RowDefinition Height="0*" />
+            <RowDefinition Height="0*" />
+        </Grid.RowDefinitions>
+        <Menu Name="MainMenu" IsMainMenu="True">
+                <MenuItem Header="退出系统" Click="MenuItem_Click" />
+                <MenuItem Header="系统设置" />
+                <MenuItem Header="用户管理">
+                    <MenuItem Header="添加用户" />
+                    <MenuItem Header="修改用户" />
+                    <MenuItem Header="删除用户" />
+                    <MenuItem Header="查询用户" />
+                </MenuItem>
+                <MenuItem Header="新建平面图" />
+                <MenuItem Header="数据导入" />
+        </Menu>
+        <Frame Height="25" HorizontalAlignment="Left" Name="frame1" VerticalAlignment="Top" Width="801"/>
+        <Frame Grid.Row="2" Height="563" HorizontalAlignment="Left" Name="frame2" VerticalAlignment="Top" Width="798"/>
+        <Frame Height="25" HorizontalAlignment="Left" Name="frame4" VerticalAlignment="Top" Width="801" Grid.RowSpan="2" />
+        <Button Content="基本信息" Height="32" HorizontalAlignment="Left" Margin="0,1,0,0" Name="BasicInfor_btn" VerticalAlignment="Top" Width="64" FontSize="12" FontWeight="Normal" FontFamily="Microsoft Tai Le" Grid.Row="1" />
+        <Button Content="房源管理" Height="32" HorizontalAlignment="Left" Margin="62,1,0,0" Name="ExpandTheManagement_btn" VerticalAlignment="Top" Width="60" FontSize="12" Grid.Row="1" />
+        <Button Content="住宿管理" Height="32" HorizontalAlignment="Left" Margin="121,1,0,0" Name="Accommodation_btn" VerticalAlignment="Top" Width="57" FontSize="12" Grid.Row="1" />
+
+        <Button Content="辅助管理" Height="32" HorizontalAlignment="Left" Margin="177,1,0,0" Name="Auxiliary_btn" VerticalAlignment="Top" Width="67" Grid.Row="1" />
+        <Button Content="假期管理" Height="32" HorizontalAlignment="Left" Margin="244,1,0,0" Name="Holiday_btn" VerticalAlignment="Top" Width="60" Grid.Row="1" />
+        <Button Content="维修管理" Height="32" HorizontalAlignment="Left" Margin="303,1,0,0" Name="Maintenance_btn" VerticalAlignment="Top" Width="61" Grid.RowSpan="2" Grid.Row="1" />
+        <Button Content="社区评定" Grid.RowSpan="2" Height="32" HorizontalAlignment="Left" Margin="364,1,0,0" Name="Community_btn" VerticalAlignment="Top" Width="60" Grid.Row="1" />
+        <Button Content="收费管理" Height="32" HorizontalAlignment="Left" Margin="424,1,0,0" Name="Charges_btn" VerticalAlignment="Top" Width="66" Grid.Row="1" />
+        <Button Content="物品管理" Height="32" HorizontalAlignment="Left" Margin="490,1,0,0" Name="Item_btn" VerticalAlignment="Top" Width="68" Grid.Row="1" />
+        <Button Content="固定资产管理" Height="32" HorizontalAlignment="Left" Margin="558,1,0,0" Name="FixedAssets_btn" VerticalAlignment="Top" Width="84" Grid.Row="1" />
+        <Button Content="专项管理" Height="32" HorizontalAlignment="Left" Margin="642,1,0,0" Name="Special_btn" VerticalAlignment="Top" Width="62" Grid.Row="1" />
+        <Button Content="信息发布与反馈" Height="32" HorizontalAlignment="Left" Margin="704,1,0,0" Name="Information_btn" VerticalAlignment="Top" Width="94" Grid.Row="1" />
+        <Frame Grid.Row="2" Height="32" HorizontalAlignment="Left" Name="frame5" VerticalAlignment="Top" Width="153" />
+        <Button Content="新建" Grid.Row="2" Height="32" HorizontalAlignment="Left" Name="New_btn" VerticalAlignment="Top" Width="42" />
+        <Button Content="平面图" Grid.Row="2" Height="32" HorizontalAlignment="Left" Margin="42,0,0,0" Name="Plan_btn" VerticalAlignment="Top" Width="56" Click="button14_Click" />
+        <Button Content="功能" Height="32" Margin="98,0,0,0" Name="Function_btn" VerticalAlignment="Top" Grid.Row="2" Click="button15_Click" HorizontalAlignment="Left" Width="54" />
+        <Frame Grid.Row="3"  HorizontalAlignment="Left" Name="frame6" VerticalAlignment="Top"  />
+        <Frame Grid.Row="2" Height="521" HorizontalAlignment="Left" Margin="0,33,0,0" Name="frame3" VerticalAlignment="Top" Width="790" />
+    </Grid>
+</Window>

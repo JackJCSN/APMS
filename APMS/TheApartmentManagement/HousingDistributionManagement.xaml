@@ -1,0 +1,43 @@
+﻿<Window x:Class="APMS.GongYuZhuSuGuanLi.Housing_distribution_management"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="宿舍预分配管理" Height="577" Width="722">
+    <Grid Height="503">
+        <Grid Height="272" HorizontalAlignment="Left" Name="grid1" VerticalAlignment="Top" Width="700" Margin="7,-23,0,0">
+            <GroupBox Header="公寓房源" Height="82" HorizontalAlignment="Left" Name="groupBox1" VerticalAlignment="Top" Width="700" Margin="0,9,0,0">
+                <Grid Height="43" Width="673">
+                    <Label Content="地址：" Height="28" HorizontalAlignment="Left" Margin="0,8,0,0" Name="labe11" VerticalAlignment="Top" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="42,10,0,0" Name="Address_comboBox" VerticalAlignment="Top" Width="120" />
+                    <Label Content="栋号：" Height="28" HorizontalAlignment="Left" Margin="179,8,0,0" Name="labe12" VerticalAlignment="Top" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="222,10,0,0" Name="DongHao_comboBox" VerticalAlignment="Top" Width="120" />
+                    <Label Content="居住性别：" Height="28" HorizontalAlignment="Left" Margin="361,9,0,0" Name="labe13" VerticalAlignment="Top" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="429,10,0,0" Name="JuZhuXingBie_comboBox" VerticalAlignment="Top" Width="120" />  
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="入住学生" Height="76" HorizontalAlignment="Left" Margin="0,88,0,0" Name="groupBox2" VerticalAlignment="Top" Width="700">
+                <Grid Height="43" Width="673">
+                    <Label Content="学院：" Height="28" HorizontalAlignment="Left" Margin="0,8,0,0" Name="label4" VerticalAlignment="Top" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="42,10,0,0" Name="College_comboBox" VerticalAlignment="Top" Width="120" />
+                    <Label Content="系所：" Height="28" HorizontalAlignment="Left" Margin="179,8,0,0" Name="label5" VerticalAlignment="Top" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="222,10,0,0" Name="Department_comboBox" VerticalAlignment="Top" Width="120" />
+                    <Label Content="专业：" Height="28" HorizontalAlignment="Left" Margin="361,9,0,0" Name="label6" VerticalAlignment="Top" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="403,10,0,0" Name="Professional_comboBox" VerticalAlignment="Top" Width="120" />
+                    <Label Content="年级：" Height="28" HorizontalAlignment="Left" Margin="539,8,0,0" Name="label7" VerticalAlignment="Top" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="581,10,0,0" Name="Grade_comboBox" VerticalAlignment="Top" Width="86" />
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="预分配原则" Height="71" HorizontalAlignment="Left" Margin="0,170,0,0" Name="groupBox3" VerticalAlignment="Top" Width="700">
+                <Grid Width="680" Height="30">
+                    <RadioButton Content="按床位注满原则分配" Height="16" HorizontalAlignment="Left" Margin="4,11,0,0" Name="radioButton1" VerticalAlignment="Top" />
+                    <RadioButton Content="按同专业年级优先分配" Height="16" HorizontalAlignment="Left" Margin="171,11,0,0" Name="radioButton2" VerticalAlignment="Top" />
+                </Grid>
+            </GroupBox>
+        </Grid>
+        <DataGrid AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" Margin="7,255,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="690" />
+        <Button Content="开始分配" Height="32" HorizontalAlignment="Left" Margin="12,461,0,0" Name="BeganToDistribution_btn" VerticalAlignment="Top" Width="90" />
+        <Button Content="查询数据" Height="32" HorizontalAlignment="Left" Margin="126,461,0,0" Name="InquiresTheData_btn" VerticalAlignment="Top" Width="92" />
+        <Button Content="打印预览" Height="32" HorizontalAlignment="Left" Margin="248,461,0,0" Name="PrintPreview_btn" VerticalAlignment="Top" Width="92" />
+        <Button Content="打印报表" Height="30" HorizontalAlignment="Left" Margin="368,461,0,0" Name="PrintReport_btn" VerticalAlignment="Top" Width="88" />
+        <Button Height="30" HorizontalAlignment="Left" Margin="489,461,0,0" Name="ReturnSystem_btn" VerticalAlignment="Top" Width="85" Content="返回系统" />
+    </Grid>
+</Window>

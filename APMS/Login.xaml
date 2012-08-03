@@ -1,0 +1,31 @@
+﻿<Window x:Class="APMS.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="登录"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" mc:Ignorable="d"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" SizeToContent="WidthAndHeight" d:DesignWidth="395">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Content="账号："  HorizontalAlignment="Left" Margin="89,15,0,0" Name="label1" VerticalAlignment="Top" Width="46" Grid.Row="1" />
+        <Label Content="密码："  HorizontalAlignment="Left" Margin="89,50,0,0" Name="label2" VerticalAlignment="Top" Width="46" Grid.Row="1" />
+        <TextBox Margin="146,15,79,0" Name="nameBox" Height="24"
+                VerticalAlignment="Top" Grid.Row="1"
+                CharacterCasing="Upper" TabIndex="1" ToolTip="请输入工号或姓名" />
+        <Button Content="登录" Margin="90,15,0,20" Name="login_btn" IsDefault="True" IsEnabled="False" Grid.Row="2" HorizontalAlignment="Left" Width="69" Height="23" TabIndex="3" Click="login_btn_Click" />
+        <Button Content="退出" Margin="0,15,80,20" Name="exit_btn" Click="button2_Click" IsCancel="True" Grid.Row="2"
+                HorizontalAlignment="Right" Width="70" Height="23" TabIndex="4" />
+        <Image Height="120" Margin="0,1,0,0" Name="image1" Stretch="UniformToFill" VerticalAlignment="Top"
+                Source="/APMS;component/Images/13_副本_副本.jpg" HorizontalAlignment="Center" Width="370" />
+        <PasswordBox Height="24" Margin="146,50,79,0" Name="passwordBox" VerticalAlignment="Top" Grid.Row="1"
+                TabIndex="2" />
+        <Label Height="26" HorizontalContentAlignment="Center" Margin="5,120,5,0" Name="ErrorText"
+                MaxHeight="Infinity" Width="Auto" Content="正在初始化……" Focusable="True" VerticalAlignment="Top">
+        </Label>
+    </Grid>
+</Window>

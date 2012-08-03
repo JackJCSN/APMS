@@ -1,0 +1,23 @@
+﻿<Page x:Class="APMS.LeftMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" Title="LeftMenu" d:DesignHeight="547" d:DesignWidth="813">
+
+    <Grid Height="531" Width="794">
+        <Button Content="基本信息设置" Height="35" HorizontalAlignment="Left" Margin="12,8,0,0" Name="BasicInfor_btn" VerticalAlignment="Top" Width="128" Click="button1_Click" />
+        <Button Content="公寓房源管理" Height="35" HorizontalAlignment="Left" Margin="12,47,0,0" Name="ApartmentHouses_btn" VerticalAlignment="Top" Width="128" Click="button2_Click" />
+        <Button Content="公寓住宿管理" Height="35" HorizontalAlignment="Left" Margin="12,88,0,0" Name="ApartmentHousing_btn" VerticalAlignment="Top" Width="128" Click="button3_Click" />
+        <Button Content="公寓辅助管理" Height="35" HorizontalAlignment="Left" Margin="12,131,0,0" Name="ApartmentAuxiliary_btn" VerticalAlignment="Top" Width="128" />
+        <Button Content="学生假期管理" Height="35" HorizontalAlignment="Left" Margin="12,173,0,0" Name="StudentsHoliday_btn" VerticalAlignment="Top" Width="128" />
+        <Button Content="公寓维修管理" Height="35" HorizontalAlignment="Left" Margin="12,217,0,0" Name="ApartmentMaintenance_btn" VerticalAlignment="Top" Width="128" />
+        <Button Content="学生社区评定" Height="35" HorizontalAlignment="Left" Margin="12,261,0,0" Name="EvaluationOfStudent_btn" VerticalAlignment="Top" Width="128" Click="button7_Click" />
+        <Button Content="公寓收费管理" Height="35" HorizontalAlignment="Left" Margin="15,306,0,0" Name="ApartmentCharges_btn" VerticalAlignment="Top" Width="125" />
+        <Button Content="公寓物品管理" Height="35" HorizontalAlignment="Left" Margin="15,350,0,0" Name="ApartmentItem_btn" VerticalAlignment="Top" Width="125" />
+        <Button Content="固定资产管理" Height="35" HorizontalAlignment="Left" Margin="15,392,0,0" Name="InFixedCapital_btn" VerticalAlignment="Top" Width="125" />
+        <Button Content="学生专项管理" Height="35" HorizontalAlignment="Left" Margin="15,435,0,0" Name="StudentsSpecial_btn" VerticalAlignment="Top" Width="125" />
+        <Button Content="信息发布与反馈" Height="35" HorizontalAlignment="Left" Margin="15,476,0,0" Name="InformationRAF_btn" VerticalAlignment="Top" Width="125" />
+        <Frame Height="520" HorizontalAlignment="Left" Margin="146,0,0,0" Name="frame1" VerticalAlignment="Top" Width="636" />
+    </Grid>
+</Page>

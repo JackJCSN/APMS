@@ -1,0 +1,24 @@
+﻿<Window x:Class="APMS.BasicInformation.SchoolName"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="学院名称设置" Height="425" Width="536">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="521*" />
+            <RowDefinition Height="0*" />
+            <RowDefinition Height="0*" />
+        </Grid.RowDefinitions>
+        <Menu Name="MainMenu" IsMainMenu="True" Height="24" Margin="0,0,0,344">
+            <MenuItem Header="新增" />
+            <MenuItem Header="修改" />
+            <MenuItem Header="删除" />
+            <MenuItem Header="返回系统" />
+        </Menu>
+        <Label Content="学院名称：" Height="25" HorizontalAlignment="Left" Margin="12,29,0,0" Name="label1" VerticalAlignment="Top" Width="85" />
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="17,57,0,0" Name="CollegeName_textBox" VerticalAlignment="Top" Width="487" />
+        <Label Content="学院列表:" Height="25" HorizontalAlignment="Left" Margin="12,87,0,0" Name="label2" VerticalAlignment="Top" Width="78" />
+        <ListBox Height="248" HorizontalAlignment="Left" Margin="17,120,0,0" Name="CollegelistBox" VerticalAlignment="Top" Width="489" />
+    </Grid>
+</Window>

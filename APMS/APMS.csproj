@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD72E92B-2F8F-45BF-A7B8-84D1BABE5D96}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APMS</RootNamespace>
+    <AssemblyName>APMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUGERLOGIN</DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CommunityAssessment\CommunityAssessment.xaml.cs">
+      <DependentUpon>CommunityAssessment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="TheApartmentManagement\ApartmentAccommodationProvided.xaml.cs">
+      <DependentUpon>ApartmentAccommodationProvided.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheApartmentManagement\HousingDistributionManagement.xaml.cs">
+      <DependentUpon>HousingDistributionManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheApartmentManagement\StudentAccommodationAdjustment.xaml.cs">
+      <DependentUpon>StudentAccommodationAdjustment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheApartmentManagement\StudentAccommodationRegistration.xaml.cs">
+      <DependentUpon>StudentAccommodationRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheApartmentManagement\StudentsLeaveManagement.xaml.cs">
+      <DependentUpon>StudentsLeaveManagement.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ApartmentHousingManagement\ApartmentHousing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ApartmentHousingManagement\ApartmentSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ApartmentHousingManagement\FlatRateSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BasicInformation\BaseInformationSet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BasicInformation\BedStatusQuery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BasicInformation\Department_ProfessionalNameSet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BasicInformation\PropertyInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BasicInformation\RulesAndRegulationsManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BasicInformation\SchoolName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BasicInformation\StudentInformationStatistics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CommunityAssessment\CommunityAssessment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ConfigWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LeftMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="ApartmentHousingManagement\ApartmentHousing.xaml.cs">
+      <DependentUpon>ApartmentHousing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApartmentHousingManagement\ApartmentSearch.xaml.cs">
+      <DependentUpon>ApartmentSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApartmentHousingManagement\FlatRateSetting.xaml.cs">
+      <DependentUpon>FlatRateSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicInformation\BaseInformationSet.xaml.cs" />
+    <Compile Include="BasicInformation\BedStatusQuery.xaml.cs">
+      <DependentUpon>BedStatusQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInformation\Department_ProfessionalNameSet.xaml.cs">
+      <DependentUpon>Department_ProfessionalNameSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInformation\PropertyInformation.xaml.cs">
+      <DependentUpon>PropertyInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInformation\RulesAndRegulationsManagement.xaml.cs">
+      <DependentUpon>RulesAndRegulationsManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInformation\SchoolName.xaml.cs">
+      <DependentUpon>SchoolName.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInformation\StudentInformationStatistics.xaml.cs">
+      <DependentUpon>StudentInformationStatistics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigWindow.xaml.cs">
+      <DependentUpon>ConfigWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LeftMenu.xaml.cs">
+      <DependentUpon>LeftMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="TheApartmentManagement\ApartmentAccommodationProvided.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheApartmentManagement\HousingDistributionManagement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheApartmentManagement\StudentAccommodationAdjustment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheApartmentManagement\StudentAccommodationRegistration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheApartmentManagement\StudentsLeaveManagement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\baseinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\xymcsz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\xsmcsz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\zymcsz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cwztgl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\xsxxtj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\xsxxtj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gzzdtzgl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gzzdtzll.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wygsxx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wygsxx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rjsydwmc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wyryxx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\title2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\title2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gysfbz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gyfjcx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gycwcx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gyfytj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataProvider\DataProvider.csproj">
+      <Project>{5A38E0D4-57A2-4075-B326-9C56919DC027}</Project>
+      <Name>DataProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gyzssz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\xszsdj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\xssstz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ssyfpfa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\xslxtj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\13_副本_副本.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\xssqpd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sswsjc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sswstj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sswstj1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

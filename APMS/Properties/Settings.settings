@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="APMS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="数据库服务器" Type="System.String" Scope="User">
+      <Value Profile="(Default)">::1</Value>
+    </Setting>
+    <Setting Name="数据库名称" Type="System.String" Scope="User">
+      <Value Profile="(Default)">APMS</Value>
+    </Setting>
+    <Setting Name="数据库用户名" Type="System.String" Scope="User">
+      <Value Profile="(Default)">APMS</Value>
+    </Setting>
+    <Setting Name="数据库密码" Type="System.String" Scope="User">
+      <Value Profile="(Default)">YsN+yDCpZHBq1LKDL35cjw==</Value>
+    </Setting>
+    <Setting Name="IsFirst" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Base1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AUjLPIW1RDEEZ0Z8pzvdF9O7Ct6kvwNHcqaI6beuLzI=</Value>
+    </Setting>
+    <Setting Name="Base2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5xZikafsq9uHgOn9EdULwg==</Value>
+    </Setting>
+    <Setting Name="使用Windows集成验证" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
