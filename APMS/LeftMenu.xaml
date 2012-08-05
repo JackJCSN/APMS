@@ -18,6 +18,7 @@
         <Button Content="固定资产管理" Height="35" HorizontalAlignment="Left" Margin="15,392,0,0" Name="InFixedCapital_btn" VerticalAlignment="Top" Width="125" />
         <Button Content="学生专项管理" Height="35" HorizontalAlignment="Left" Margin="15,435,0,0" Name="StudentsSpecial_btn" VerticalAlignment="Top" Width="125" />
         <Button Content="信息发布与反馈" Height="35" HorizontalAlignment="Left" Margin="15,476,0,0" Name="InformationRAF_btn" VerticalAlignment="Top" Width="125" />
-        <Frame Height="520" HorizontalAlignment="Left" Margin="146,0,0,0" Name="frame1" VerticalAlignment="Top" Width="636" />
+        <Frame Margin="146,0,0,0" Name="frame1" NavigationUIVisibility="Hidden"
+                Source="BasicInformation\BaseInformationSet.xaml" />
     </Grid>
 </Page>
