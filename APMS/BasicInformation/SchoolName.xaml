@@ -1,24 +1,27 @@
 ﻿<Window x:Class="APMS.BasicInformation.SchoolName"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="学院名称设置" Height="425" Width="536">
+        Title="学院名称设置" SizeToContent="WidthAndHeight"
+        mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignWidth="536" MinWidth="536"
+        ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterOwner">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="521*" />
-            <RowDefinition Height="0*" />
-            <RowDefinition Height="0*" />
+            <RowDefinition Height="Auto" MinHeight="254" />
         </Grid.RowDefinitions>
-        <Menu Name="MainMenu" IsMainMenu="True" Height="24" Margin="0,0,0,344">
-            <MenuItem Header="新增" />
-            <MenuItem Header="修改" />
-            <MenuItem Header="删除" />
-            <MenuItem Header="返回系统" />
+        <Menu Name="MainMenu" IsMainMenu="True" Height="24" Margin="0,0,0,90">
+            <MenuItem Header="新增" Click="Insert" />
+            <MenuItem Header="修改" Click="Modify" />
+            <MenuItem Header="删除" Click="Delete" />
+            <MenuItem Header="刷新" Click="Refresh" />
+            <MenuItem Header="返回" Click="Exiting" />
         </Menu>
-        <Label Content="学院名称：" Height="25" HorizontalAlignment="Left" Margin="12,29,0,0" Name="label1" VerticalAlignment="Top" Width="85" />
-        <TextBox Height="24" HorizontalAlignment="Left" Margin="17,57,0,0" Name="CollegeName_textBox" VerticalAlignment="Top" Width="487" />
-        <Label Content="学院列表:" Height="25" HorizontalAlignment="Left" Margin="12,87,0,0" Name="label2" VerticalAlignment="Top" Width="78" />
-        <ListBox Height="248" HorizontalAlignment="Left" Margin="17,120,0,0" Name="CollegelistBox" VerticalAlignment="Top" Width="489" />
+        <Label Content="学院名称：" Height="25" HorizontalAlignment="Left" Margin="15,33,0,0" Name="label1" VerticalAlignment="Top" Width="85" />
+        <TextBox Height="24" Margin="17,61,17,0" Name="CollegeName_textBox" VerticalAlignment="Top"
+                Text="{Binding Path=Name, BindsDirectlyToSource=True, Mode=OneWay}"
+                DataContext="{Binding ElementName=CollegelistBox, Path=SelectedValue}" />
+        <Label Content="学院列表:" Height="25" HorizontalAlignment="Left" Margin="15,91,0,0" Name="label2" VerticalAlignment="Top" Width="78" Grid.RowSpan="2" />
+        <ListBox Margin="17,10,17,13" Name="CollegelistBox" Grid.Row="1" DisplayMemberPath="Name" />
     </Grid>
 </Window>
