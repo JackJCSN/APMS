@@ -22,6 +22,7 @@ namespace APMS
         public MainWindow()
         {
             InitializeComponent();
+            App.Current.MainWindow = this;
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
