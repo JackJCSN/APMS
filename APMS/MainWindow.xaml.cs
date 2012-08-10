@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DataProvider;
 
 namespace APMS
 {
@@ -22,7 +23,23 @@ namespace APMS
         public MainWindow()
         {
             InitializeComponent();
+            System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler((a, b) =>
+            {
+                try
+                {
+                    StatusTimer.Content = DateTime.Now;
+                }
+                catch (Exception ex)
+                {
+                    Debuger.PrintException(ex);
+                }
+            });
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
             App.Current.MainWindow = this;
+            statusBar1.DataContext = ((App)App.Current).Auth;
+            StatusTimer.DataContext = DateTime.Now;
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
