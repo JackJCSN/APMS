@@ -7,8 +7,9 @@
       d:DesignHeight="548" d:DesignWidth="571"
 	Title="BaseInformationSet">
 
-    <Grid Height="534" Width="571"  >
-        <Image Height="90" HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="570" Source="/APMS;component/Images/baseinfo.png" />
+    <Grid MinHeight="534" MinWidth="571"  >
+        <Image Height="90" Name="image1" Stretch="Fill" VerticalAlignment="Top"
+                Source="/APMS;component/Images/baseinfo.png" HorizontalAlignment="Left" Width="571" />
         <Label Content="基本信息设置：" Height="27" HorizontalAlignment="Left" Margin="10,101,0,0" Name="label1" VerticalAlignment="Top" Width="152" />
         <Button Height="60" HorizontalAlignment="Left" Margin="104,131,0,0" Name="CollegeNameSet_btn" VerticalAlignment="Top" Width="60" Click="button1_Click">
             <Button.Content>
@@ -42,7 +43,8 @@
             </Button.Content>
         </Button>
         <Label Content="规章制度通知管理" Height="26" HorizontalAlignment="Left" Margin="82,447,0,0" Name="label9" VerticalAlignment="Top" Width="107" />
-        <Button Height="60" HorizontalAlignment="Right" Margin="0,381,297,0" Name="EmployingInformation_btn" VerticalAlignment="Top" Width="60" Click="button10_Click">
+        <Button Height="60" Margin="214,381,0,0" Name="EmployingInformation_btn" VerticalAlignment="Top"
+                Click="button10_Click" HorizontalAlignment="Left" Width="60">
             <Button.Content>
                 <Image Source="/APMS;component/Images/wyryxx.jpg" />
             </Button.Content>
