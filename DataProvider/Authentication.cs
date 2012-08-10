@@ -49,7 +49,10 @@ namespace DataProvider
     /// </summary>
     public sealed class Authentication : IDisposable
     {
+        private DateTime LatestTime;
         DBConnctor conn;
+        public static readonly TimeSpan OverTimeSpan = new TimeSpan(1, 0, 0);
+        public bool IsExpired { get { return ((DateTime.Now - LatestTime) > OverTimeSpan); } }
         public String Name { get; private set; }
         public String Uid { get; private set; }
         public String Type { get; private set; }
@@ -143,6 +146,7 @@ namespace DataProvider
                 TypeID = data.GetInt32(3);
                 Type = data.GetString(4);
                 data.Close();
+                LatestTime = DateTime.Now;
                 return true;
             }
             data.Close();
@@ -152,25 +156,42 @@ namespace DataProvider
         /// <summary>
         /// <para>联合查询授权检查</para>
         /// <para>注意:在联合授权检查中，对任何一个表可获取的权限低于请求检查的最低权限时，都会导致授权失败</para>
-        /// <para>警告:在当前版本中，系统不进行权限检测，并直接返回授权成功。</para>
+        /// <para>警告:在当前版本中，系统只进行登录超时检查，不进行权限检测。</para>
         /// </summary>
         /// <param name="TableName">包含要使用的dbo表的名称的数组</param>
         /// <param name="request">需要的最低权限</param>
         /// <returns>是否具有该权限</returns>
         public bool CheckAllows(String[] TableName, Permission request = Permission.ALL)
         {
+            if (IsExpired)
+            {
+                return false;
+            }
+            foreach (var s in TableName)
+            {
+                //if (!CheckAllows(s, request))
+                //{
+                //    return false;
+                //}
+            }
+            LatestTime = DateTime.Now;
             return true;
         }
 
         /// <summary>
         /// 授权检查
-        /// <para>警告:在当前版本中，系统不进行权限检测，并直接返回授权成功。</para>
+        /// <para>警告:在当前版本中，系统只进行登录超时检查，不进行权限检测。</para>
         /// </summary>
         /// <param name="TableName">表名</param>
         /// <param name="request">需要的最低权限</param>
         /// <returns>是否具有该权限</returns>
         public bool CheckAllows(String TableName, Permission request = Permission.ALL)
         {
+            if (IsExpired)
+            {
+                return false;
+            }
+            LatestTime = DateTime.Now;
             return true;
         }
 
