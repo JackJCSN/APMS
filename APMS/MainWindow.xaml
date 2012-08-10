@@ -3,6 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="学生公寓管理系统" WindowStartupLocation="CenterScreen" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" MinWidth="800" MinHeight="600" ResizeMode="CanResizeWithGrip" mc:Ignorable="d" SizeToContent="WidthAndHeight"
         Icon="/APMS;component/Images/xfsm-logout.png">
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo ProgressState="None"
+                ProgressValue="99"></TaskbarItemInfo>
+    </Window.TaskbarItemInfo>
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter1" />
+    </Window.Resources>
     <Grid Name="grid1">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -59,5 +66,20 @@
                 <x:Static Member="sys:DateTime.Now"/>
             </StatusBarItem>
         </StatusBar>
+        <Grid Margin="0" Grid.RowSpan="5" Name="LockView" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions><Rectangle Grid.RowSpan="5" Name="rectangle1" Margin="0" Fill="#7C000000" Visibility="{Binding Path=IsExpired, Converter={StaticResource BooleanToVisibilityConverter1}}"></Rectangle>
+            <Label Content="登录超时，已经锁定。输入密码以解锁" Foreground="Gainsboro" FontSize="32" HorizontalContentAlignment="Center" />
+            <PasswordBox Grid.Row="2" Name="passwordBox1" VerticalAlignment="Top" Background="#9F000000" FontSize="28" Margin="100,10,100,10" HorizontalContentAlignment="Center" Foreground="Gainsboro" />
+            <Button Content="解锁" Grid.Row="3" Height="70" Margin="350,10"
+                    Name="Unlock" FontSize="32"
+                    Click="Unlock_Click" IsDefault="True"></Button>
+            <TextBlock Text="" Grid.Row="4" Margin="100,10" Name="ErrorText" FontSize="20" Foreground="Yellow" />
+        </Grid>
     </Grid>
 </Window>
