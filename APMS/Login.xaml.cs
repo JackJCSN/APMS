@@ -67,7 +67,7 @@ namespace APMS
 #if DEBUGERLOGIN
                 nameBox.Text = "DEBUGER";
                 passwordBox.Password = "DEBUGER";
-                login_btn_Click(this, new RoutedEventArgs());
+                //login_btn_Click(this, new RoutedEventArgs());
 #endif
             }
             catch (Exception ex)
@@ -87,14 +87,17 @@ namespace APMS
                 {
                     new MainWindow().Show();
                     this.Close();
+                    return;
                 }
-                ErrorText.Content = "登录失败:\r\n" + "用户名或密码不正确。";
+                ErrorText.Content = "登录失败:\r\n用户名或密码不正确。";
                 ErrorText.Foreground = Brushes.Red;
+                this.TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.Paused;
             }
             catch (Exception ex)
             {
                 ErrorText.Content = "错误:\r\n" + DataProvider.Debuger.PrintExcetionW(ex, 20);
                 ErrorText.Foreground = Brushes.Red;
+                this.TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.Error;
             }
         }
     }
