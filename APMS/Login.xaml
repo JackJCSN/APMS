@@ -5,7 +5,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize" mc:Ignorable="d"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" SizeToContent="WidthAndHeight" d:DesignWidth="395" Icon="/APMS;component/Images/seahorse.png">
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" SizeToContent="WidthAndHeight" MaxWidth="395" Width="395" Icon="/APMS;component/Images/seahorse.png">
     <Window.TaskbarItemInfo>
         <TaskbarItemInfo Overlay="/APMS;component/Images/seahorse.png" Description="未登录" ProgressState="None"
                 ProgressValue="99"></TaskbarItemInfo>
@@ -28,8 +28,6 @@
                 Source="/APMS;component/Images/13_副本_副本.jpg" HorizontalAlignment="Center" Width="370" />
         <PasswordBox Height="24" Margin="146,50,79,0" Name="passwordBox" VerticalAlignment="Top" Grid.Row="1"
                 TabIndex="2" />
-        <Label HorizontalContentAlignment="Center" Margin="5,120,5,0" Name="ErrorText"
-                MaxHeight="Infinity" Width="Auto" Content="正在初始化……" Focusable="True" VerticalAlignment="Top">
-        </Label>
+        <TextBlock Margin="5,125,0,0" Name="ErrorText" Text="正在初始化……" Focusable="True" VerticalAlignment="Top" TextAlignment="Center" TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" Width="363" />
     </Grid>
 </Window>
