@@ -9,7 +9,7 @@ namespace DataProvider
     /// <summary>
     /// 调试器
     /// </summary>
-    public static class  Debuger
+    public static class Debuger
     {
         public static String PrintExcetionW(Exception ex, int a)
         {
@@ -24,7 +24,11 @@ namespace DataProvider
                 l = l / a;
                 for (int i = 1; i <= l; i++)
                 {
-                    s.Append(ex.Message.Substring((i - 1) * a, a)+"\r\n");
+                    s.Append(ex.Message.Substring((i - 1) * a, a) + "\r\n");
+                }
+                if (l * a < ex.Message.Length)
+                {
+                    s.Append(ex.Message.Substring((l) * a, ex.Message.Length - l * a));
                 }
             }
             return s.ToString();

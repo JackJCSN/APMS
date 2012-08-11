@@ -12,7 +12,7 @@ namespace DataProvider
         /// <summary>
         /// 超时时间
         /// </summary>
-        public static readonly int TimeOut = 10;
+        public static readonly int TimeOut = 7;
         Boolean Integrated = false;
         String Server;
         String DBName;
@@ -51,7 +51,7 @@ namespace DataProvider
         public void Open()
         {
             SqlConnectionStringBuilder sqlCSB = new SqlConnectionStringBuilder();
-            sqlCSB.Add("server", Server);
+            sqlCSB.Add("server", "tcp:" + Server);
             sqlCSB.Add("database", DBName);
             if (this.Integrated)
             {
@@ -83,7 +83,7 @@ namespace DataProvider
             try
             {
                 SqlConnectionStringBuilder sqlCSB = new SqlConnectionStringBuilder();
-                sqlCSB.Add("server", Server);
+                sqlCSB.Add("server", "tcp:" + Server);
                 if (UserName == null || PassWord == null)
                 {
                     sqlCSB.Add("Integrated Security", true);
@@ -133,7 +133,7 @@ namespace DataProvider
             try
             {
                 SqlConnectionStringBuilder sqlCSB = new SqlConnectionStringBuilder();
-                sqlCSB.Add("server", Server);
+                sqlCSB.Add("server", "tcp:" + Server);
                 sqlCSB.Add("database", DataBaseName);
                 sqlCSB.Add("Integrated Security", true);
                 sqlCSB.Add("Connection Timeout", TimeOut);
@@ -168,7 +168,7 @@ namespace DataProvider
             try
             {
                 SqlConnectionStringBuilder sqlCSB = new SqlConnectionStringBuilder();
-                sqlCSB.Add("server", Server);
+                sqlCSB.Add("server", "tcp:" + Server);
                 sqlCSB.Add("database", DataBaseName);
                 sqlCSB.Add("uid", UserName);
                 sqlCSB.Add("pwd", PassWord);
