@@ -27,12 +27,12 @@ namespace APMS.BasicInformation
             Auth = app.Auth;
             InitializeComponent();
             GetList();
+            statuText.Content = "就绪";
         }
 
         private void GetList()
         {
             School[]  s = School.GetSchools(Auth);
-
             CollegelistBox.ItemsSource = s;
         }
 
@@ -44,20 +44,25 @@ namespace APMS.BasicInformation
         private void Refresh(object sender, RoutedEventArgs e)
         {
             GetList();
+            statuText.Content = "就绪";
         }
 
         private void Insert(object sender, RoutedEventArgs e)
         {
             if (CollegeName_textBox.Text == "")
             {
+                statuText.Content = "请输入一个有效的名称";
                 return;
             }
             try
             {
+                statuText.Content = "插入错误,请联系管理员";
                 School.Insert(CollegeName_textBox.Text, Auth);
+                statuText.Content = "就绪";
             }
             catch (NoPermissionException ex)
             {
+                statuText.Content = "权限不足！请使用更高权限的账户或者向管理员请求临时授权";
                 MessageBox.Show(this, "权限不足！\r\n" + ex.Message, "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             catch (Exception ex)
@@ -70,6 +75,7 @@ namespace APMS.BasicInformation
         private void Modify(object sender, RoutedEventArgs e)
         {
             School s = null;
+            statuText.Content = "更新错误，请联系管理员";
             try
             {
                 s =  (School)CollegelistBox.SelectedItem;
@@ -77,10 +83,17 @@ namespace APMS.BasicInformation
                 {
                     s.Name = CollegeName_textBox.Text;
                     s.Update(Auth);
+                    statuText.Content = "已更新";
+                }
+                else
+                {
+                    statuText.Content = "请先选择一个条目或者使用新增功能";
+                    return;
                 }
             }
             catch (NoPermissionException ex)
             {
+                statuText.Content = "权限不足！请使用更高权限的账户或者向管理员请求临时授权";
                 MessageBox.Show(this, "权限不足！\r\n" + ex.Message, "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             catch (Exception ex)
@@ -97,16 +110,24 @@ namespace APMS.BasicInformation
         private void Delete(object sender, RoutedEventArgs e)
         {
             School s = null;
+            statuText.Content = "删除错误，请联系管理员";
             try
             {
                 s =  (School)CollegelistBox.SelectedItem;
                 if (s != null)
                 {
                     s.Delete(Auth);
+                    statuText.Content = "已删除";
+                }
+                else
+                {
+                    statuText.Content = "请选择一个用于删除的条目";
+                    return;
                 }
             }
             catch (NoPermissionException ex)
             {
+                statuText.Content = "权限不足！请使用更高权限的账户或者向管理员请求临时授权";
                 MessageBox.Show(this, "权限不足！\r\n" + ex.Message, "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             catch (Exception ex)
