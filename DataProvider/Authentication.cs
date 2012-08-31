@@ -51,8 +51,8 @@ namespace DataProvider
     {
         private DateTime LatestTime;
         DBConnctor conn;
-        public static readonly TimeSpan OverTimeSpan = new TimeSpan(1, 0, 0);
-        public bool IsExpired { get { return ((DateTime.Now - LatestTime) > OverTimeSpan); } }
+        public static readonly TimeSpan ExpirationTimeSpan = new TimeSpan(1, 0, 0);
+        public bool IsExpired { get { return ((DateTime.Now - LatestTime) > ExpirationTimeSpan); } }
         public String Name { get; private set; }
         public String Uid { get; private set; }
         public String Type { get; private set; }
