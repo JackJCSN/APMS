@@ -125,6 +125,10 @@
     <value>没有找到相关院系信息</value>
     <comment>没有找到院系</comment>
   </data>
+  <data name="NoMajor" xml:space="preserve">
+    <value>没有找到相关专业信息</value>
+    <comment>没有找到专业</comment>
+  </data>
   <data name="NoPermission" xml:space="preserve">
     <value>您的权限不足以执行该操作，请尝试使用更高的授权</value>
     <comment>没有权限或权限不足</comment>
