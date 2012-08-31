@@ -1,50 +1,69 @@
 ﻿<Window x:Class="APMS.BasicInformation.BedStatusQuery"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="BedStatusQuery" Height="556" Width="621">
-    <Grid>
-        <Image Height="136" HorizontalAlignment="Left" Margin="21,19,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="112" />
-        <Label Content="学号：" Height="24" HorizontalAlignment="Left" Margin="140,19,0,0" Name="label1_xuehao" VerticalAlignment="Top" Width="133" />
-        <Label Content="姓名：" Height="24" HorizontalAlignment="Left" Margin="140,41,0,0" Name="label1_name" VerticalAlignment="Top" Width="133" />
-        <Label Content="性别：" Height="24" HorizontalAlignment="Left" Margin="140,63,0,0" Name="label1_sex" VerticalAlignment="Top" Width="133" />
-        <Label Content="学院：" Height="24" HorizontalAlignment="Left" Margin="140,85,0,0" Name="label1_College" VerticalAlignment="Top" Width="133" />
-        <Label Content="专业：" Height="24" HorizontalAlignment="Left" Margin="140,107,0,0" Name="label1_Professional" VerticalAlignment="Top" Width="133" />
-        <Label Content="年级：" Height="24" HorizontalAlignment="Left" Margin="140,129,0,0" Name="label1_Grade" VerticalAlignment="Top" Width="133" />
-        <Image Height="136" HorizontalAlignment="Left" Margin="317,19,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="112" />
-        <Label Content="学号：" Height="24" HorizontalAlignment="Left" Margin="435,19,0,0" Name="label2_xuehao" VerticalAlignment="Top" Width="133" />
-        <Label Content="姓名：" Height="24" HorizontalAlignment="Left" Margin="435,41,0,0" Name="label2_name" VerticalAlignment="Top" Width="133" />
-        <Label Content="性别：" Height="24" HorizontalAlignment="Left" Margin="435,63,0,0" Name="label2_sex" VerticalAlignment="Top" Width="133" />
-        <Label Content="学院：" Height="24" HorizontalAlignment="Left" Margin="435,85,0,0" Name="label2_College" VerticalAlignment="Top" Width="133" />
-        <Label Content="专业：" Height="24" HorizontalAlignment="Left" Margin="435,107,0,0" Name="label2_Professional" VerticalAlignment="Top" Width="133" />
-        <Label Content="年级：" Height="24" HorizontalAlignment="Left" Margin="435,129,0,0" Name="label2_Grade" VerticalAlignment="Top" Width="133" />
-        <Image Height="136" HorizontalAlignment="Left" Margin="21,189,0,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="112" />
-        <Label Content="学号：" Height="24" HorizontalAlignment="Left" Margin="140,189,0,0" Name="label3_xuehao" VerticalAlignment="Top" Width="133" />
-        <Label Content="姓名：" Height="24" HorizontalAlignment="Left" Margin="140,211,0,0" Name="label3_name" VerticalAlignment="Top" Width="133" />
-        <Label Content="性别：" Height="24" HorizontalAlignment="Left" Margin="140,233,0,0" Name="label3_sex" VerticalAlignment="Top" Width="133" />
-        <Label Content="学院：" Height="24" HorizontalAlignment="Left" Margin="140,255,0,0" Name="label3_College" VerticalAlignment="Top" Width="133" />
-        <Label Content="专业：" Height="24" HorizontalAlignment="Left" Margin="140,277,0,0" Name="label3_Professional" VerticalAlignment="Top" Width="133" />
-        <Label Content="年级：" Height="24" HorizontalAlignment="Left" Margin="140,299,0,0" Name="label3_Grade" VerticalAlignment="Top" Width="133" />
-        <Image Height="136" HorizontalAlignment="Left" Margin="317,189,0,0" Name="image4" Stretch="Fill" VerticalAlignment="Top" Width="112" />
-        <Label Content="学号：" Height="24" HorizontalAlignment="Left" Margin="435,189,0,0" Name="label4_xuehao" VerticalAlignment="Top" Width="133" />
-        <Label Content="姓名：" Height="24" HorizontalAlignment="Left" Margin="435,211,0,0" Name="label4_name" VerticalAlignment="Top" Width="133" />
-        <Label Content="性别：" Height="24" HorizontalAlignment="Left" Margin="435,233,0,0" Name="label4_sex" VerticalAlignment="Top" Width="133" />
-        <Label Content="学院：" Height="24" HorizontalAlignment="Left" Margin="435,255,0,0" Name="label4_College" VerticalAlignment="Top" Width="133" />
-        <Label Content="专业：" Height="24" HorizontalAlignment="Left" Margin="435,277,0,0" Name="label4_Professional" VerticalAlignment="Top" Width="133" />
-        <Label Content="年级：" Height="24" HorizontalAlignment="Left" Margin="435,299,0,0" Name="label4_Grade" VerticalAlignment="Top" Width="133" />
-        <Image Height="136" HorizontalAlignment="Left" Margin="21,359,0,0" Name="image5" Stretch="Fill" VerticalAlignment="Top" Width="112" />
-        <Label Content="学号：" Height="24" HorizontalAlignment="Left" Margin="140,359,0,0" Name="label5_xuehao" VerticalAlignment="Top" Width="133" />
-        <Label Content="姓名：" Height="24" HorizontalAlignment="Left" Margin="140,381,0,0" Name="label5_name" VerticalAlignment="Top" Width="133" />
-        <Label Content="性别：" Height="24" HorizontalAlignment="Left" Margin="140,403,0,0" Name="label5_sex" VerticalAlignment="Top" Width="133" />
-        <Label Content="学院：" Height="24" HorizontalAlignment="Left" Margin="140,425,0,0" Name="label5_College" VerticalAlignment="Top" Width="133" />
-        <Label Content="专业：" Height="24" HorizontalAlignment="Left" Margin="140,447,0,0" Name="label5_Professional" VerticalAlignment="Top" Width="133" />
-        <Label Content="年级：" Height="24" HorizontalAlignment="Left" Margin="140,469,0,0" Name="label5_Grade" VerticalAlignment="Top" Width="133" />
-        <Image Height="136" HorizontalAlignment="Left" Margin="317,359,0,0" Name="image6" Stretch="Fill" VerticalAlignment="Top" Width="112" />
-        <Label Content="学号：" Height="24" HorizontalAlignment="Left" Margin="435,359,0,0" Name="label6_xuehao" VerticalAlignment="Top" Width="133" />
-        <Label Content="姓名：" Height="24" HorizontalAlignment="Left" Margin="435,381,0,0" Name="label6_name" VerticalAlignment="Top" Width="133" />
-        <Label Content="性别：" Height="24" HorizontalAlignment="Left" Margin="435,403,0,0" Name="label6_sex" VerticalAlignment="Top" Width="133" />
-        <Label Content="学院：" Height="24" HorizontalAlignment="Left" Margin="435,425,0,0" Name="label6_College" VerticalAlignment="Top" Width="133" />
-        <Label Content="专业：" Height="24" HorizontalAlignment="Left" Margin="435,447,0,0" Name="label6_Professional" VerticalAlignment="Top" Width="133" />
-        <Label Content="年级：" Height="24" HorizontalAlignment="Left" Margin="435,469,0,0" Name="label6_Grade" VerticalAlignment="Top" Width="133" />
+        Title="房间信息查询" mc:Ignorable="d"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterOwner" d:DesignHeight="522" d:DesignWidth="703" SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <DataTemplate  x:Key="StudentInfoTemplate">
+            <Border Name="border" BorderBrush="Aqua" BorderThickness="1" Margin="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="116" />
+                        <ColumnDefinition Width="36" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <!--EDITOR-->
+                    <Image HorizontalAlignment="Left" Name="HeaderPic" Source="/APMS;component/Images/62faf073jw1djk4innskgj.jpg" Stretch="Uniform" VerticalAlignment="Top" Width="112" Margin="4"  Grid.RowSpan="6"/>
+                    <TextBlock Text="学号：" Margin="4" Name="label1_xuehao" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" Grid.ColumnSpan="2" />
+                    <TextBlock Text="姓名：" Margin="4" Name="label1_name" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" />
+                    <TextBlock Text="性别：" Margin="4" Name="label1_sex" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" />
+                    <TextBlock Text="院系：" Margin="4" Name="label1_College" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" />
+                    <TextBlock Text="专业：" Margin="4" Name="label1_Professional" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" />
+                    <TextBlock Text="年级：" Margin="4" Name="label1_Grade" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" />
+                    <TextBlock Text="0951210201" Margin="4" Name="label2_xuehao" VerticalAlignment="Top" Grid.Column="2" TextWrapping="WrapWithOverflow" />
+                    <TextBlock Margin="4" Name="label2_name" VerticalAlignment="Top" Text="Jack JCSN" Grid.Column="2" Grid.Row="1" TextWrapping="WrapWithOverflow" />
+                    <TextBlock Margin="4" Name="label2_sex" VerticalAlignment="Top" Text="男" Grid.Column="2" Grid.Row="2" TextWrapping="WrapWithOverflow" />
+                    <TextBlock Margin="4" Name="label2_College" VerticalAlignment="Top" Text="信息工程系" Grid.Column="2" Grid.Row="3" TextWrapping="WrapWithOverflow" />
+                    <TextBlock Margin="4" Name="label2_Professional"
+   VerticalAlignment="Top"              Text="计算机科学与技术（软件）"
+                Grid.Column="2" Grid.Row="4" TextWrapping="WrapWithOverflow"
+                            TextTrimming="None" />
+                    <TextBlock Margin="4" Name="label2_Grade" VerticalAlignment="Top" Text                 ="2009级" Grid.Column="2" Grid.Row="5"
+                TextWrapping="WrapWithOverflow" />
+                    <!--ENDEDITOR-->
 
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ListBox Name="listBox1" ItemTemplate="{StaticResource StudentInfoTemplate}" SelectionMode="Extended">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" Width="700" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBoxItem Content="a" ContentTemplate="{StaticResource StudentInfoTemplate}" Padding="2" />
+            <ListBoxItem Content="a" ContentTemplate="{StaticResource StudentInfoTemplate}" Padding="2" />
+            <ListBoxItem Content="a" ContentTemplate="{StaticResource StudentInfoTemplate}" Padding="2" />
+            <ListBoxItem Content="a" ContentTemplate="{StaticResource StudentInfoTemplate}" Padding="2" />
+            <ListBoxItem Content="a" ContentTemplate="{StaticResource StudentInfoTemplate}" Padding="2" />
+            <ListBoxItem Content="a" ContentTemplate="{StaticResource StudentInfoTemplate}" Padding="2" />
+        </ListBox>
     </Grid>
 </Window>
