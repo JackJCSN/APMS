@@ -65,17 +65,27 @@ namespace APMS
                 ErrorText.TextAlignment = TextAlignment.Center;
                 login_btn.IsEnabled = true;
                 nameBox.Focus();
+                TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.None;
 #if DEBUGERLOGIN
                 nameBox.Text = "DEBUGER";
                 passwordBox.Password = "DEBUGER";
                 //login_btn_Click(this, new RoutedEventArgs());
 #endif
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
+                TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.None;
                 Title = "错误";
                 ErrorText.TextAlignment = TextAlignment.Left;
-                ErrorText.Text = "错误:\r\n程序无法连接到数据库。请检查应用程序设置后重新启动应用程序。\r\n" + ex.Message;
+                ErrorText.Text = "错误:\r\n程序无法连接到数据库。请检查应用程序设置后重新启动应用程序。\r\n如果依旧出现此错误，请联系系统维护人员\r\n以下信息可以提供给维护人员帮助解决问题:\r\nSQL Server Client Error No." + ex.Number;
+                ErrorText.Foreground = Brushes.Red;
+            }
+            catch (Exception ex)
+            {
+                TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.None;
+                Title = "错误";
+                ErrorText.TextAlignment = TextAlignment.Left;
+                ErrorText.Text = "错误:\r\n程序无法连接到数据库。请检查应用程序设置后重新启动应用程序。\r\n如果依旧出现此错误，请联系系统维护人员\r\n" + ex.Message;
                 ErrorText.Foreground = Brushes.Red;
             }
         }
