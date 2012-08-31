@@ -33,7 +33,7 @@ namespace APMS.BasicInformation
         private void GetList()
         {
             School[]  s = School.GetSchools(Auth);
-            CollegelistBox.ItemsSource = s;
+            SchoolListBox.ItemsSource = s;
         }
 
         private void Exiting(object sender, RoutedEventArgs e)
@@ -49,7 +49,7 @@ namespace APMS.BasicInformation
 
         private void Insert(object sender, RoutedEventArgs e)
         {
-            if (CollegeName_textBox.Text == "")
+            if (SchoolBox.Text == "")
             {
                 statuText.Content = "请输入一个有效的名称";
                 return;
@@ -57,7 +57,7 @@ namespace APMS.BasicInformation
             try
             {
                 statuText.Content = "插入错误,请联系管理员";
-                School.Insert(CollegeName_textBox.Text, Auth);
+                School.Insert(SchoolBox.Text, Auth);
                 statuText.Content = "就绪";
             }
             catch (NoPermissionException ex)
@@ -78,10 +78,10 @@ namespace APMS.BasicInformation
             statuText.Content = "更新错误，请联系管理员";
             try
             {
-                s =  (School)CollegelistBox.SelectedItem;
+                s = (School)SchoolListBox.SelectedItem;
                 if (s != null)
                 {
-                    s.Name = CollegeName_textBox.Text;
+                    s.Name = SchoolBox.Text;
                     s.Update(Auth);
                     statuText.Content = "已更新";
                 }
@@ -103,7 +103,7 @@ namespace APMS.BasicInformation
             GetList();
             if (s != null)
             {
-                CollegelistBox.SelectedValue = s.Name;
+                SchoolListBox.SelectedValue = s.Name;
             }
         }
 
@@ -113,7 +113,7 @@ namespace APMS.BasicInformation
             statuText.Content = "删除错误，请联系管理员";
             try
             {
-                s =  (School)CollegelistBox.SelectedItem;
+                s =  (School)SchoolListBox.SelectedItem;
                 if (s != null)
                 {
                     s.Delete(Auth);
