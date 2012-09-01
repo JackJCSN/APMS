@@ -7,7 +7,7 @@
       d:DesignHeight="419" d:DesignWidth="574"
 	Title="Community_assessment">
 
-    <Grid Width="571" Height="419">
+    <Grid MinWidth="571" MinHeight="419">
         <Image Height="90" HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="570" Source="/APMS;component/Images/xssqpd.jpg" />
         <Label Content="学生社区评定" Height="28" HorizontalAlignment="Left" Margin="9,97,0,0" Name="label1" VerticalAlignment="Top" />
         <Button Height="64" HorizontalAlignment="Left" Margin="97,121,0,0" Name="DormitoryHealthCheck_btn" VerticalAlignment="Top" Width="64">
