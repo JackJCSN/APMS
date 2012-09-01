@@ -68,6 +68,7 @@ namespace APMS
         private void testBtn_Click(object sender, RoutedEventArgs e)
         {
             bool isOk = false;
+            this.Cursor = Cursors.Wait;
             String Error = "";
             try
             {
@@ -83,10 +84,12 @@ namespace APMS
             }
             catch (Exception ex)
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(this, "连接测试失败!\r\n发生了一个错误：\r\n" + ex.Message, "连接测试", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
+            this.Cursor = Cursors.Arrow;
             if (isOk)
             {
                 MessageBox.Show(this, "连接测试成功", "连接测试", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -124,6 +127,7 @@ namespace APMS
         {
             setting.Save();
             Settings.Default.Reload();
+            this.Close();
         }
     }
 

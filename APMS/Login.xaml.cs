@@ -61,19 +61,31 @@ namespace APMS
                         app.Auth = new Authentication(s.ServerName, s.DataBaseName, s.UserName, s.UserPass);
                     }
                 }
-                ErrorText.Content = null;
+                ErrorText.Text = null;
+                ErrorText.TextAlignment = TextAlignment.Center;
                 login_btn.IsEnabled = true;
                 nameBox.Focus();
+                TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.None;
 #if DEBUGERLOGIN
                 nameBox.Text = "DEBUGER";
                 passwordBox.Password = "DEBUGER";
-                login_btn_Click(this, new RoutedEventArgs());
+                //login_btn_Click(this, new RoutedEventArgs());
 #endif
+            }
+            catch (SqlException ex)
+            {
+                TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.None;
+                Title = "错误";
+                ErrorText.TextAlignment = TextAlignment.Left;
+                ErrorText.Text = "错误:\r\n程序无法连接到数据库。请检查应用程序设置后重新启动应用程序。\r\n如果依旧出现此错误，请联系系统维护人员\r\n以下信息可以提供给维护人员帮助解决问题:\r\nSQL Server Client Error No." + ex.Number;
+                ErrorText.Foreground = Brushes.Red;
             }
             catch (Exception ex)
             {
+                TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.None;
                 Title = "错误";
-                ErrorText.Content = "错误:\r\n程序无法连接到数据库。\r\n请检查应用程序设置后重新启动应用程序。\r\n" + DataProvider.Debuger.PrintExcetionW(ex, 20);
+                ErrorText.TextAlignment = TextAlignment.Left;
+                ErrorText.Text = "错误:\r\n程序无法连接到数据库。请检查应用程序设置后重新启动应用程序。\r\n如果依旧出现此错误，请联系系统维护人员\r\n" + ex.Message;
                 ErrorText.Foreground = Brushes.Red;
             }
         }
@@ -87,14 +99,18 @@ namespace APMS
                 {
                     new MainWindow().Show();
                     this.Close();
+                    return;
                 }
-                ErrorText.Content = "登录失败:\r\n" + "用户名或密码不正确。";
+                ErrorText.Text = "登录失败:\r\n用户名或密码不正确。";
                 ErrorText.Foreground = Brushes.Red;
+                this.TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.Paused;
             }
             catch (Exception ex)
             {
-                ErrorText.Content = "错误:\r\n" + DataProvider.Debuger.PrintExcetionW(ex, 20);
+                ErrorText.Text = "错误:\r\n" + ex.Message;
+                ErrorText.TextAlignment = TextAlignment.Left;
                 ErrorText.Foreground = Brushes.Red;
+                this.TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.Error;
             }
         }
     }

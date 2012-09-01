@@ -3,9 +3,13 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      mc:Ignorable="d" Title="LeftMenu" d:DesignHeight="547" d:DesignWidth="813">
+      mc:Ignorable="d" Title="LeftMenu">
 
-    <Grid Height="531" Width="794">
+    <Grid MinHeight="531" MinWidth="794">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="143" />
+            <ColumnDefinition Width="*" MinWidth="651" />
+        </Grid.ColumnDefinitions>
         <Button Content="基本信息设置" Height="35" HorizontalAlignment="Left" Margin="12,8,0,0" Name="BasicInfor_btn" VerticalAlignment="Top" Width="128" Click="button1_Click" />
         <Button Content="公寓房源管理" Height="35" HorizontalAlignment="Left" Margin="12,47,0,0" Name="ApartmentHouses_btn" VerticalAlignment="Top" Width="128" Click="button2_Click" />
         <Button Content="公寓住宿管理" Height="35" HorizontalAlignment="Left" Margin="12,88,0,0" Name="ApartmentHousing_btn" VerticalAlignment="Top" Width="128" Click="button3_Click" />
@@ -18,6 +22,7 @@
         <Button Content="固定资产管理" Height="35" HorizontalAlignment="Left" Margin="15,392,0,0" Name="InFixedCapital_btn" VerticalAlignment="Top" Width="125" />
         <Button Content="学生专项管理" Height="35" HorizontalAlignment="Left" Margin="15,435,0,0" Name="StudentsSpecial_btn" VerticalAlignment="Top" Width="125" />
         <Button Content="信息发布与反馈" Height="35" HorizontalAlignment="Left" Margin="15,476,0,0" Name="InformationRAF_btn" VerticalAlignment="Top" Width="125" />
-        <Frame Height="520" HorizontalAlignment="Left" Margin="146,0,0,0" Name="frame1" VerticalAlignment="Top" Width="636" />
+        <Frame Margin="10" Name="frame1" NavigationUIVisibility="Hidden"
+                Source="BasicInformation\BaseInformationSet.xaml" Grid.Column="1" />
     </Grid>
 </Page>

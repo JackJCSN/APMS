@@ -5,22 +5,31 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="68" />
+            <RowDefinition Height="182*" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="521*" />
+            <RowDefinition Height="6*" />
             <RowDefinition Height="0*" />
             <RowDefinition Height="0*" />
         </Grid.RowDefinitions>
-        <Menu Name="MainMenu" IsMainMenu="True" Height="24" Margin="0,0,0,251">
+        <Menu Name="MainMenu" IsMainMenu="True" Height="24" VerticalAlignment="Top">
             <MenuItem Header="刷新" />
             <MenuItem Header="录入" />
             <MenuItem Header="修改" />
             <MenuItem Header="删除" />
             <MenuItem Header="返回系统" />
         </Menu>
-        <Label Content="文档名称：" Height="25" HorizontalAlignment="Left" Margin="10,34,0,0" Name="label1" VerticalAlignment="Top" Width="70" />
-        <Label Content="文档路径：" Height="25" HorizontalAlignment="Left" Margin="10,66,0,0" Name="label2" VerticalAlignment="Top" Width="70" />
-        <TextBox Height="26" HorizontalAlignment="Left" Margin="86,33,0,0" Name="DocumentName_textBox" VerticalAlignment="Top" Width="466" />
-        <TextBox Height="25" HorizontalAlignment="Left" Margin="86,66,0,0" Name="DocumentPath_textBox2" VerticalAlignment="Top" Width="466" />
-        <DataGrid AutoGenerateColumns="False" Height="172" HorizontalAlignment="Left" Margin="12,97,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="540" />
+        <Label Content="文档名称：" HorizontalAlignment="Left" Margin="10,8,0,0" Name="label1" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="文档路径：" HorizontalAlignment="Left" Margin="10,40,0,0" Name="label2" VerticalAlignment="Top" Grid.Row="1" />
+        <TextBox Height="26" Margin="86,7,17,0" Name="DocumentName_textBox" VerticalAlignment="Top" Grid.Row="1" />
+        <TextBox Height="25" Margin="156,40,17,0" Name="DocumentPath_textBox2" VerticalAlignment="Top" Grid.Row="1" />
+        <DataGrid AutoGenerateColumns="False" Margin="12,4,17,6" Name="dataGrid1" Grid.Row="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="编号" />
+                <DataGridTextColumn Header="名称" />
+                <DataGridHyperlinkColumn Header="查看文件" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="选择文件" Grid.Row="1" Height="25" HorizontalAlignment="Left" Margin="86,40,0,0" Name="button1" VerticalAlignment="Top" Width="64" />
     </Grid>
 </Window>

@@ -19,6 +19,8 @@ namespace APMS.BasicInformation
     /// </summary>
     public partial class BaseInformationSet : Page
     {
+        Window m = App.Current.MainWindow;
+
         public BaseInformationSet()
         {
             InitializeComponent();
@@ -27,37 +29,49 @@ namespace APMS.BasicInformation
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             //学院设置
-            new SchoolName().Show();
+            var s = new SchoolName();
+            s.Owner = m;
+            s.Show();
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             //系、专业名称设置
-            new Department_ProfessionalNameSet().Show();
+            var d =  new Department_ProfessionalNameSet();
+            d.Owner = m;
+            d.Show();
         }
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
             //床位状态管理
-            new BedStatusQuery().Show();
+            var b = new BedStatusQuery();
+            b.Owner = m;
+            b.Show();
         }
 
         private void button5_Click(object sender, RoutedEventArgs e)
         {
             //学生信息统计
-            new StudentInformationStatistics().Show();
+            var s = new StudentInformationStatistics();
+            s.Owner = m;
+            s.Show();
         }
 
         private void button6_Click(object sender, RoutedEventArgs e)
         {
             //规章制度通知管理
-            new RulesAndRegulationsManagement().Show();
+            var r =  new RulesAndRegulationsManagement();
+            r.Owner = m;
+            r.Show();
         }
 
         private void button10_Click(object sender, RoutedEventArgs e)
         {
             //物业人员信息
-            new PropertyInformation().Show();
+            var p =  new PropertyInformation();
+            p.Owner = m;
+            p.Show();
         }
     }
 }

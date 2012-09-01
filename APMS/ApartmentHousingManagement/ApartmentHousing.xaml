@@ -7,7 +7,7 @@
       d:DesignHeight="573" d:DesignWidth="571"
 	Title="ApartmentHousing">
 
-    <Grid Height="553">
+    <Grid MinHeight="553">
         <Image Height="86" HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="571" Source="/APMS;component/Images/title2.jpg" />
         <Label Content="公寓房源管理：" Height="26" HorizontalAlignment="Left" Margin="9,90,0,0" Name="label1" VerticalAlignment="Top" Width="93" />
         <Button Height="60" HorizontalAlignment="Left" Margin="100,111,0,0" Name="FeeStandards_btn" VerticalAlignment="Top" Width="60" Click="button1_Click">

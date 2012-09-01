@@ -79,6 +79,15 @@ namespace DataProvider {
         }
         
         /// <summary>
+        ///   查找类似 没有找到相关专业信息 的本地化字符串。
+        /// </summary>
+        internal static string NoMajor {
+            get {
+                return ResourceManager.GetString("NoMajor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 您的权限不足以执行该操作，请尝试使用更高的授权 的本地化字符串。
         /// </summary>
         internal static string NoPermission {
