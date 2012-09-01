@@ -127,6 +127,7 @@ namespace APMS
         {
             setting.Save();
             Settings.Default.Reload();
+            this.Close();
         }
     }
 
