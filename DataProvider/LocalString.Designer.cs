@@ -61,6 +61,15 @@ namespace DataProvider {
         }
         
         /// <summary>
+        ///   查找类似 文件过大，请选择小于10M字节的文件 的本地化字符串。
+        /// </summary>
+        internal static string FileToLarger {
+            get {
+                return ResourceManager.GetString("FileToLarger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 找不到可用的数据库或提供的用户名密码不正确 的本地化字符串。
         /// </summary>
         internal static string NoDBNames {
