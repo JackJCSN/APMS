@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Authentication.cs" />
     <Compile Include="Department.cs" />
+    <Compile Include="Documents.cs" />
     <Compile Include="Schools.cs" />
     <Compile Include="Connctor.cs" />
     <Compile Include="Debuger.cs" />
