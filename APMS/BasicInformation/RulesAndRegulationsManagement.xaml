@@ -1,35 +1,45 @@
 ﻿<Window x:Class="APMS.BasicInformation.RulesAndRegulationsManagement"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="规章制度及通知通告管理" Height="320" Width="591">
-    <Grid>
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="规章制度及通知通告管理" MinHeight="320" MinWidth="591"
+        ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner"
+        Loaded="Window_Loaded">
+    <Grid DataContext="APMS.BasicInformation.RulesAndRegulationsManagement" Drop="Grid_Drop" AllowDrop="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="68" />
-            <RowDefinition Height="182*" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="6*" />
-            <RowDefinition Height="0*" />
-            <RowDefinition Height="0*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Menu Name="MainMenu" IsMainMenu="True" Height="24" VerticalAlignment="Top">
-            <MenuItem Header="刷新" />
-            <MenuItem Header="录入" />
-            <MenuItem Header="修改" />
-            <MenuItem Header="删除" />
-            <MenuItem Header="返回系统" />
+        <Menu Name="MainMenu" IsMainMenu="True">
+            <MenuItem Header="刷新" Click="MenuItem_Click_2" />
+            <MenuItem Header="录入" Click="MenuItem_Click_1" />
+            <MenuItem Header="删除" Click="MenuItem_Click_3" />
+            <MenuItem Header="下载选中文件" Click="MenuItem_Click_4" />
+            <MenuItem Header="返回系统" Click="MenuItem_Click" />
         </Menu>
-        <Label Content="文档名称：" HorizontalAlignment="Left" Margin="10,8,0,0" Name="label1" VerticalAlignment="Top" Grid.Row="1" />
-        <Label Content="文档路径：" HorizontalAlignment="Left" Margin="10,40,0,0" Name="label2" VerticalAlignment="Top" Grid.Row="1" />
-        <TextBox Height="26" Margin="86,7,17,0" Name="DocumentName_textBox" VerticalAlignment="Top" Grid.Row="1" />
-        <TextBox Height="25" Margin="156,40,17,0" Name="DocumentPath_textBox2" VerticalAlignment="Top" Grid.Row="1" />
-        <DataGrid AutoGenerateColumns="False" Margin="12,4,17,6" Name="dataGrid1" Grid.Row="2">
+
+        <DataGrid AutoGenerateColumns="False" Margin="10" Name="Files" Grid.Row="2" SelectionMode="Extended">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="编号" />
-                <DataGridTextColumn Header="名称" />
-                <DataGridHyperlinkColumn Header="查看文件" />
+                <DataGridTextColumn Header="编号" Binding="{Binding Path=ID, Mode=OneWay}" />
+                <DataGridTextColumn Header="文件名" Binding="{Binding Path=Name, Mode=OneWay}" />
+                <DataGridTextColumn Header="校验和" Binding="{Binding Path=Hash, Mode=OneWay}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="选择文件" Grid.Row="1" Height="25" HorizontalAlignment="Left" Margin="86,40,0,0" Name="button1" VerticalAlignment="Top" Width="64" />
+
+        <StatusBar Grid.Row="4" Grid.RowSpan="2" Height="23" Name="status" VerticalAlignment="Top">
+            <StatusBarItem Name="statusText" Content="就绪" />
+        </StatusBar>
+        <GroupBox Grid.Row="1" Header="文件上传" Name="groupBox1" Margin="10,5" Width="549">
+            <Grid>
+                <Label Content="文档名称：" HorizontalAlignment="Left" Margin="10,10,5,0" Name="label1"
+                        VerticalAlignment="Top" Grid.Row="0" />
+                <Label Content="文档路径：" HorizontalAlignment="Left" Margin="10,45,5,5" Name="label2" />
+                <TextBox Margin="85,10,6,0" Name="FileNameBox" VerticalAlignment="Top" ToolTip="设置文件在系统中要显示的名字"
+                        Width="456" />
+                <TextBox Margin="145,45,6,5" Name="FilePathBox" IsReadOnly="True" Width="396" />
+                <Button Content="浏览" HorizontalAlignment="Left" Margin="85,45,5,5" Name="button1" Click="button1_Click"
+                        Width="54" />
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
